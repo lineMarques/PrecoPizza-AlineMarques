@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora de Pizzas</title>
+</head>
+
+<body>
+    <div class="card"></div>
+    <main class="container">
+        <div class="box">
+            <form action="" method="post">
+                <h1>Calculadora de pizzas</h1>
+
+                <p>Escolha o tamanho das pizzas e veja qual melhor custo beneficio!!</p>
+
+                <select name="nmTipoPizza" id="idTipoPizza">
+                    <option value="mini">Mini 15cm</option>
+                    <option value="brotinho">Brotinho 25cm</option>
+                    <option value="media">Média 30cm</option>
+                    <option value="grande">Grande 40cm</option>
+                    <option value="big">Big 60cm</option>
+                </select>
+
+                <input type="number" id="idValor">
+
+                <button type="submit" id="btnEscolherPizza">Escolher</button>
+            </form>
+
+            <div class="divTabelaPizzas">
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Tipo</th>
+                            <th>tamanho</th>
+                            <th>Valor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+            <div class="divTabelaCustoBeneficio" hidden>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Tipo</th>
+                            <th>tamanho</th>
+                            <th>Valor</th>
+                            <th>Valor Por m²</th>
+                            <th>Diferença em % </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button type="submit" id="btnCalcular">Calcular Custo Benficio</button>
+            </div>
+        </div>
+
+    </main>
+</body>
+
+</html>
