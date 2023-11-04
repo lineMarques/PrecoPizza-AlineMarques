@@ -4,78 +4,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <title>Calculadora de Pizzas</title>
 </head>
 
-<body>
-    <div class="card"></div>
-    <main class="container">
-        <div class="box">
-            <form action="" method="post">
-                <h1>Calculadora de pizzas</h1>
+<body class="">
+    <main>
+        <div class="d-flex justify-content-center row m-5">
 
-                <p>Escolha o tamanho das pizzas e veja qual melhor custo beneficio!!</p>
+            <img src="assets/calculator.jpg" class="col w-25">
 
-                <select name="nmTipoPizza" id="idTipoPizza">
-                    <option value="mini">Mini 15cm</option>
-                    <option value="brotinho">Brotinho 25cm</option>
-                    <option value="media">Média 30cm</option>
-                    <option value="grande">Grande 40cm</option>
-                    <option value="big">Big 60cm</option>
-                </select>
+            <section class="m-5 rounded-3 p-5 col text-center" style="background-color: yellow;">
 
-                <input type="number" id="idValor">
+                <form action="" method="post">
+                    <h1 class="col">Calculadora de pizzas</h1>
+                    <p class="position-relative ">Inclua as pizzas e veja qual melhor custo beneficio!!</p>
+                    <div class="row input-group">
+                        <select class="form-select col" name="nmTipoPizza" id="idTipoPizza">
+                            <option value="-">Tipo</option>
+                            <option value="mini">Mini</option>
+                            <option value="brotinho">Brotinho</option>
+                            <option value="media">Média</option>
+                            <option value="grande">Grande</option>
+                            <option value="big">Big</option>
+                        </select>
 
-                <button type="submit" id="btnEscolherPizza">Escolher</button>
-            </form>
+                        <input class="form-control col" type="number" id="idTamanho" placeholder="Tamanho" required>
+                        <input class="col" type="number" id="idPreco" placeholder="Preço" required>
+                        <button class="btn-light col" type="submit" id="idBtnIncluirPizza">Incluir</button>
+                    </div>
 
-            <div class="divTabelaPizzas">
-                <table border="1">
-                    <thead>
-                        <tr>
-                            <th>Tipo</th>
-                            <th>tamanho</th>
-                            <th>Valor</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+                </form>
+
+                <div id="divTabelaPizzas" hidden>
+                    <table id="idTabelaPizzas" class="table mt-5">
+                        <thead>
+                            <tr>
+                                <th scope="col">Tipo</th>
+                                <th scope="col">tamanho</th>
+                                <th scope="col">Valor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                        </tbody>
+                    </table>
+                </div>
 
 
-            <div class="divTabelaCustoBeneficio" hidden>
-                <table border="1">
-                    <thead>
-                        <tr>
-                            <th>Tipo</th>
-                            <th>tamanho</th>
-                            <th>Valor</th>
-                            <th>Valor Por m²</th>
-                            <th>Diferença em % </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <button type="submit" id="btnCalcular">Calcular Custo Benficio</button>
-            </div>
+                <div id="divTabelaCustoBeneficio" hidden>
+                    <table id="idTabelaCusto" class="table mt-5  ">
+                        <thead>
+                            <tr>
+                                <th scope="col">Tipo</th>
+                                <th scope="col">tamanho</th>
+                                <th scope="col">Valor</th>
+                                <th scope="col">Area</th>
+                                <th scope="col">Custo Beneficio</th>
+                                <th scope="col">Diferença em % </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                        </tbody>
+                    </table>
+
+                </div>
+                <button class="btn-light " type="submit" id="btnCalcular" hidden>Calcular Custo Benficio</button>
         </div>
-
+        </section>
     </main>
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
